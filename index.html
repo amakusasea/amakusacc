@@ -447,7 +447,7 @@
 
         html += '<div class="block">';
         var leftPad = 12 - r.left.length;
-        for (p = 0; p < leftPad; p++) html += '<div style="width:9px"></div>';
+        for (p = 0; p < leftPad; p++) html += '<div style="width:8px"></div>';
         for (n = 0; n < r.left.length; n++) {
           html += '<div class="st" data-seat="' + r.prefix + '-' + r.left[n] + '"></div>';
         }
@@ -464,7 +464,7 @@
           html += '<div class="st" data-seat="' + r.prefix + '-' + r.right[n] + '"></div>';
         }
         var rightPad = 12 - r.right.length;
-        for (p = 0; p < rightPad; p++) html += '<div style="width:9px"></div>';
+        for (p = 0; p < rightPad; p++) html += '<div style="width:8px"></div>';
         html += '</div>';
 
         html += '<div class="row-label">' + r.row + '</div>';
