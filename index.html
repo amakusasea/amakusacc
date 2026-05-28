@@ -170,7 +170,7 @@
 <h1>席案内検索</h1>
 
 <div class="search-wrap">
-  <input type="text" id="q" placeholder="席番号" autofocus>
+  <input type="text" id="q" placeholder="席番号（例：5列　または　10　など席番号の一部を入力）" autofocus>
   <button class="clear-btn" id="clearBtn">×</button>
 </div>
 
@@ -181,9 +181,9 @@
 
 <div class="cat-filters" id="catFilters"></div>
 
-<div id="results">
-  <p class="empty">席番号を入力してください</p>
-</div>
+//<div id="results">
+  //<p class="empty">席番号を入力してください</p>
+//</div>
 
 <div class="map-section">
   <div class="map-title">座席マップ（席をタップで詳細表示）</div>
@@ -492,7 +492,7 @@
 
   // 凡例
   function buildLegend() {
-    var html = '<span><span class="swatch" style="background:#d5dbe3"></span>空席</span>';
+    var html = '<span><span class="swatch" style="background:#d5dbe3"></span>座席</span>';
     for (i = 0; i < allCats.length; i++) {
       html += '<span><span class="swatch" style="background:' + getCatColor(allCats[i]) + '"></span>' + allCats[i] + '</span>';
     }
@@ -575,7 +575,7 @@
     resetMap();
 
     if (!q) {
-      resEl.innerHTML = '<p class="empty">名前の一部を入力してください</p>';
+      resEl.innerHTML = '<p class="empty">座席の一部を入力してください</p>';
       countEl.textContent = "";
       return;
     }
